@@ -1,5 +1,7 @@
 public class problem4 {
-    // this solution contains some critical logical flaws, but for the time being it produces the right answer, so I will just let it be.
+    // This solution contains some critical logical flaws, but for the time being it produces the right answer, so I will just let it be.
+    // There should be a check for other single digit prime factors that fits the requirement (produces a 3-digit number with other prime 
+    // factors, and the result divided by this product is also a 3 digit number) 
     public static void main(String[] args) {
         /*
         a, b, c are positive single digit integers
