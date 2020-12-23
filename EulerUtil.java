@@ -5,7 +5,7 @@ public class EulerUtil {
 
     //Test method
     public static void main(String[] args) {
-        long num = 500000;
+        long num = 1;
 
         System.out.println(getMaxPrimeFactor(num));
     }
@@ -47,5 +47,13 @@ public class EulerUtil {
             resultList.add(factor); //auto wrapped long -> Long
         }
         return resultList;
+    }
+
+    public static long getProduct(List<Long> list) {
+        long result = 1;
+        for (int i = 0; i < list.size(); i ++) {
+            result *= list.get(i);
+        }
+        return result;
     }
 }
