@@ -5,9 +5,13 @@ public class EulerUtil {
 
     //Test method
     public static void main(String[] args) {
-        long num = 1;
-
-        System.out.println(getMaxPrimeFactor(num));
+        long num = 3;
+        int result = 2;
+        for (; num < 1000000; num += 2)
+            if (isPrime(num))
+                result += num;
+                
+        System.out.println(result);
     }
 
     public static long getMaxPrimeFactor(long num) {
@@ -55,5 +59,36 @@ public class EulerUtil {
             result *= list.get(i);
         }
         return result;
+    }
+
+    public static long getChooseMfromN(long m, long n) {
+        long result = 1;
+        for (long i = n; i >= m && i > n - m + 1; i --) {
+            result *= i;
+            result /= (n - i + 1);
+        }
+        return result;
+    }
+
+    public static long getArrangeMfromN(long m, long n) {
+        long result = 1;
+        for (long i = n; i >= m; i --) {
+            result *= i;
+        }
+        return result;
+    }
+
+    public static List<Long> getDivisors(long num) {
+        List<Long> resultList = new ArrayList<>();
+        for (long i = 1; i < Math.sqrt(num); i ++) {
+            if (num % i == 0) {
+                resultList.add(i);
+                resultList.add(num / i);
+            }
+        }
+        if (Math.sqrt(num) % 1 == 0)
+            resultList.add((long)Math.sqrt(num));
+
+        return resultList;
     }
 }
