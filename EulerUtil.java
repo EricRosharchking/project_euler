@@ -5,13 +5,7 @@ public class EulerUtil {
 
     //Test method
     public static void main(String[] args) {
-        long num = 3;
-        int result = 2;
-        for (; num < 1000000; num += 2)
-            if (isPrime(num))
-                result += num;
-                
-        System.out.println(result);
+        System.out.println(getChooseMfromN(20, 40));
     }
 
     public static long getMaxPrimeFactor(long num) {
@@ -62,8 +56,8 @@ public class EulerUtil {
     }
 
     public static long getChooseMfromN(long m, long n) {
-        long result = 1;
-        for (long i = n; i >= m && i > n - m + 1; i --) {
+        long result = 1L;
+        for (long i = n; i >= m && i >= n - m + 1; i --) {
             result *= i;
             result /= (n - i + 1);
         }

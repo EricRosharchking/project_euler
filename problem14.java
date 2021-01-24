@@ -1,4 +1,3 @@
-import java.security.interfaces.EdECKey;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -36,6 +35,7 @@ public class problem14 {
     }
 }
 
+//implements callable
 class Collatz implements Runnable{
 
     private Long firstLong;
