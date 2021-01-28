@@ -1,14 +1,10 @@
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class problem {
+public class problem18 {
     public static void main(String[] args) {
         /*
-<<<<<<< HEAD
-        Maximum path sum I
-=======
                       75
                      95 64
                     17 47 82
@@ -24,26 +20,7 @@ public class problem {
           91 71 52 38 17 14 91 43 58 50 27 29 48
          63 66 04 68 89 53 67 30 73 16 69 87 40 31
         04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
-
-
-          255 235 154 150 140 179 256 209 224 172 174 176 131
-        125 164 102 95  112 123 165 128 166 109 122 147 100 54
->>>>>>> 1adcf88 (Problem 18 solution)
         */
-
-        // for(int i = 1; i <= 30; i ++) {
-        //     String str = String.valueOf(Math.pow(2, i));
-        //     int result = 0;
-        //     for (char digit: str.toCharArray()) {
-        //         try {
-        //             result += Integer.parseInt(String.valueOf(digit));
-        //         } catch (NumberFormatException e) {
-
-        //         }
-                
-        //     }
-        //     System.out.println(result);
-        // }
 
         List<String[]> list = new ArrayList<>();
 

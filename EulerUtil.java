@@ -85,4 +85,12 @@ public class EulerUtil {
 
         return resultList;
     }
+
+    public static List<Integer> getIntegersFromStrings(List<String> strList) {
+        List<Integer> intList = new ArrayList<>();
+        for (String string: strList) {
+            intList.add(Integer.valueOf(String.valueOf(string)));
+        }
+        return intList;
+    }
 }
