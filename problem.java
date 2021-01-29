@@ -3,22 +3,23 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class problem {
     public static void main(String[] args) {
         /*
-        1 Jan 1900 was a Monday.
-        Thirty days has September,
-        April, June and November.
-        All the rest have thirty-one,
-        Saving February alone,
-        Which has twenty-eight, rain or shine.
-        And on leap years, twenty-nine.
-        A leap year occurs on any year evenly divisible by 4, but not on a century unless it is divisible by 400.
-        How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
+        Let d(n) be defined as the sum of proper divisors of n (numbers less than n which divide evenly into n).
+        If d(a) = b and d(b) = a, where a ≠ b, then a and b are an amicable pair and each of a and b are called amicable numbers.
+
+        For example, the proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 and 110; therefore d(220) = 284. The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220.
+
+        Evaluate the sum of all the amicable numbers under 10000.
         */
 
     }
