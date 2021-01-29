@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,10 +65,10 @@ public class EulerUtil {
         return result;
     }
 
-    public static long getArrangeMfromN(long m, long n) {
-        long result = 1;
-        for (long i = n; i >= m; i --) {
-            result *= i;
+    public static BigInteger getArrangeMfromN(long m, long n) {
+        BigInteger result = new BigInteger("1");
+        for (long i = n; i > n-m; i --) {
+            result = result.multiply(BigInteger.valueOf(i));
         }
         return result;
     }
