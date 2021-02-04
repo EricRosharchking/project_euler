@@ -16,7 +16,6 @@ public class problem21 {
             }
             List<Long> list = EulerUtil.getDivisors(i);
             list.remove(i);
-            // System.out.println(list);
             Long amicableLong = 0L;
             for (long j: list) {
                 amicableLong += j;

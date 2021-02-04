@@ -22,31 +22,21 @@ public class problem22 {
             File file=new File("/Users/ly/Downloads/p022_names.txt");    //creates a new file instance  
             FileReader fr=new FileReader(file);   //reads the file  
             BufferedReader br=new BufferedReader(fr);  //creates a buffering character input stream  
-            // StringBuffer sb=new StringBuffer();    //constructs a string buffer with no characters  
             int line;  
             int i = 0;
             String name = "";  
             while((line=br.read())!=-1 && i < 50) {  
-                    // sb.append(line);      //appends line to string buffer  
-                    // sb.append("\n");     //line feed 
-                    
                     char c = (char)line;
-                    // list.add(line.split(" "));
-                    // System.out.println((char)line);
                     if ( c == '"' || c == ',') {
                         if (!name.isEmpty()) {
-                            // System.out.println(name);
                             names.add(name);
                             name ="";
                         }
                     } else {
                         name += c;
                     }
-                    // i++;
             }  
             fr.close();    //closes the stream and release the resources  
-            // System.out.println("Contents of File: ");  
-            // System.out.println(sb.toString());   //returns a string that textually represents the object  
         } catch(IOException e) {  
             e.printStackTrace();  
         }
@@ -55,14 +45,10 @@ public class problem22 {
         Collections.sort(names);
         long result = 0L;
 
-        
         for (int i = 0; i < names.size(); i ++) {
-            // System.out.println(names.get(i));
             result += (i+1)*getNameScore(names.get(i));
-            
         }
         System.out.println(result);
-        // System.out.println(getNameScore(names.get(937)));
     }
 
     public static Integer getNameScore(String name) {
