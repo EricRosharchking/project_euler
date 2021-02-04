@@ -94,4 +94,28 @@ public class EulerUtil {
         }
         return intList;
     }
+
+    public static ArrayList<Character> getCharsFromString(String str) {
+        ArrayList<Character> list = new ArrayList<>();
+        for (char c: str.toCharArray()) {
+            list.add(c);
+        }
+        return list;
+    }
+
+    public static BigInteger getFibonacci(int index) {
+        BigInteger result = new BigInteger("1");
+        if (index <= 2) {
+            return result;
+        }
+        BigInteger i = BigInteger.valueOf(1L);
+        BigInteger j = BigInteger.valueOf(1L);
+        for (int num = 3; num <= index; num ++) {
+            BigInteger k = i.add(j);
+            i = j;
+            j = k;
+        }
+        result = j;
+        return result;
+    }
 }
