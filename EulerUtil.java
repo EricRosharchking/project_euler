@@ -32,10 +32,23 @@ public class EulerUtil {
     }
 
     public static boolean isPrime(long num) {
+        if (num < 2) {
+            return false;
+        }
         if (num == getMaxPrimeFactor(num)) {
             return true;
         }
         return false;
+    }
+
+    public static List<Long> getPrimesBelow(long num) {
+        List<Long> resultList = new ArrayList<>();
+        for (long i = 2L; i <= num; i ++) {
+            if (isPrime(i)) {
+                resultList.add(i);
+            }
+        }
+        return resultList;
     }
 
     public static List<Long> getAllPrimeFactors(long num) {
